@@ -1,1 +1,656 @@
-test
+<meta charset="UTF-8">
+
+
+
+<html>
+
+
+<HEAD>
+<title>Raphael Rocha da Silva</title>
+<META NAME="Author" CONTENT="Raphael Rocha da Silva">
+<!-- <META name="description" content="Definições das ordens O, Omega e Theta."> -->
+<!-- <META NAME="keywords" CONTENT="Landau, assintotica, ordem O, Omega, Theta, Teta"> -->
+<META name="language" content="Portuguese">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=ISO-8859-1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <LINK rel="stylesheet" href="index.css" type="text/css"> -->
+<LINK rel="stylesheet" media="(min-width:850px)" href="style.css" type="text/css">
+<LINK rel="stylesheet" media="(max-width:849px)" href="style-mobile.css" type="text/css">
+<!-- <LINK rel="stylesheet" media="print" href="style-aulas-print.css" type="text/css"> -->
+<style type="text/css">
+li.thispage-exr {
+  margin-top: 0.5em;
+}
+</style>
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+
+<body>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85911435-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<div id="header">
+Home | <a href="portpholio/index.html">Produção Acadêmica</a> | <a href="redessociais.html">Redes sociais</a><br><br>
+<a href="index_en.html">in English</a>
+
+
+<div id="section">
+
+<center><img src="photo.jpg" style = "width:220px;height:220px;"></center>
+<h1>Raphael Rocha da Silva</h1>
+
+<!-- <h2></h2> -->
+<p>
+Aluno de mestrado em Ciência de Computação e Matemática Computacional na Universidade de São Paulo.<br>
+Bacharel em Engenharia de Computação pela Universidade Federal de Mato Grosso do Sul.<br>
+Residindo atualmente em São Carlos, SP, Brasil.
+<br>
+</p>
+
+<p>
+<b>Currículo:</b> <a href="http://lattes.cnpq.br/0145978111563399">Lattes</a>
+</p>
+
+
+
+<h2>Formação</h2> 
+<p>
+
+<p>
+<b>Mestrado (em andamento):  Ciência de Computação e Matemática Computacional</b> <br>
+&#x1F4CC; Universidade de São Paulo, São Carlos <br> 
+&#x1F4C5; Março 2017 &ndash; Março 2019 &ensp;(estimado) <br>
+&#x1F4DA; Áreas de pesquisa:&ensp;Inteligência Artificial,&ensp;Linguística Computacional,&ensp;Sumarização Automática,&ensp;Mineração de Opinião <br>
+&#x1F50E; Projeto de pesquisa:&ensp;Sumarização Comparativa de Opinião<br>
+&#x1F5E3; Orientador:&ensp;Dr. <a class='thiagopardo'>Thiago Pardo</a><br>
+&#x1F3DB; Laboratório:&ensp;<a class='nilc'>Núcleo Interinstitucional de Linguística Computacional</a> <br>
+&#x1F4B0; Bolsista da FAPESP (atual) e da CAPES (até agosto de 2017)
+</p>
+
+<b>Bacharelado: Engenharia de Computação</b> <br>
+&#x1F4CC; Universidade Federal de Mato Grosso do Sul, Campo Grande <br>
+&#x1F4C5; Fevereiro 2011 &ndash; Setembro 2016   <br>
+<a id="info_undergrad"><button type="button" onclick="showinfo_undergrad()">+info</button></a>
+</p>
+<script>
+function showinfo_undergrad() {
+document.getElementById("info_undergrad").innerHTML = ' \
+&bullet; Cursou 9 semestres com carga horária de 3317 horas. <br>\
+&bullet; Período de intercâmbio de 2 semestres, com carga horária de 306 horas. <br>\
+&bullet; Total de 11 semestres e 3623 horas. <br>\
+&bullet; Trabalho de conclusão de curso: <a href="portpholio/monografia/index.html">Controle com realimentação de estado estimado via LMI</a><br>\
+&bullet; <a href="files/ProjetoPedagogicoEngCompUFMS2016.pdf">Projeto pedagógico do curso</a><br>\
+Pressione <button type="button" onclick="DisplayClassesUFMS()">aqui</button> para <a id="classesUFMSword">ver</a> as disciplinas que já foram cursadas.<br> '
+}
+</script> 
+
+</p>
+<p id="classesUFMS"></p>
+<p>
+<b>Aluno visitante do programa Ciência Sem Fronteiras</b> <br>
+&#x1F4CC; Universidade do Arkansas, Fayeteville <br>
+&#x1F4C5; Agosto 2014 &ndash; Maio 2015 <br>
+<a id="info_csf"><button type="button" onclick="showinfo_csf()">+info</button></a>
+</p>
+<script>
+function showinfo_csf() {
+document.getElementById("info_csf").innerHTML = ' \
+&#x1F4B0; Financiado pelo Programa de Mobilidade Científica Brasileira <br>\
+&bullet; Cursou um total de 8 disciplinas durante 2 semestres com carga horária de 408 horas.<br>\
+&bullet; 6 disciplinas relacionadas a Engenharia de Computação, totalizando 306 horas.<br>\
+Pressione <button type="button" onclick="DisplayClassesUARK()">aqui</button> para <a id="classesUARKword">ver</a> as disciplinas cursadas.<br>'
+}
+</script> 
+<p id="classesUARK"></p>
+
+<script>
+var showCoursesUARK = 0;
+function DisplayClassesUARK() {
+	if (showCoursesUARK == 0) {
+		showCoursesUARK = 1;
+		document.getElementById("classesUARKword").innerHTML = "ocultar";
+		document.getElementById("classesUARK").innerHTML = ' \
+<p style="margin-left: 36px" align="left">\
+<b>Fall 2014:</b> <br>\
+Composition 1 <br>\
+Programação Paradigms <br>\
+Software Engenharia <br> \
+Introduction to Integrated Circuit Design <br> \
+<br>\
+<b>Spring 2015:</b> <br>\
+Elementary German 1 <br>\
+Managing People and Organizations <br>\
+Electric Circuits and Machines <br> \
+Computer Networks <br> \
+		</p>';
+	}
+	else {
+		showCoursesUARK = 0;
+		document.getElementById("classesUARK").innerHTML = "";
+		document.getElementById("classesUARKword").innerHTML = "ver";
+	}	
+}
+</script>
+
+<h2>Formação Complementar</h2>
+
+
+<b>Programa de Iniciação Científica Júnior de Matemática da OBMEP</b><br>
+
+&#x1F4CC; Universidade Federal de Mato Grosso do Sul, Campo Grande <br>
+&#x1F4C5; Junho 2006 &ndash; Abril 2012<br>
+&#x1F552; 1120 horas <br>
+&#x1F5E3; Orientado pelos professores <a class='sonia'>Sonia Di Giacomo</a>, <a class='tamarozzi'>Antonio Tamarozzi</a>, <a class='fernandosouza'>Fernando Souza</a> e <a class='celsocardoso'>Celso Cardoso</a><br>
+<a id="info_PIC2006"><button type="button" onclick="showinfo_PIC2006()">+info</button></a>
+</p><p>
+<script>
+function showinfo_PIC2006() {
+document.getElementById("info_PIC2006").innerHTML = ' \
+&#x1F3C3; Participou de seis edições do projeto<br>\
+&#x1F3DB; Executado em salas de aula e laboratórios da UFMS <br>\
+&#x1F4B0; Bolsista do CNPq <br>\
+<desc>Realizado por meio de uma rede de professores orientadores distribuídos por todo o país. Os alunos participaram em turmas de encontros presenciais com esses professores e tiveram acesso a um fórum virtual (elaborado pela OBMEP, onde realizaram tarefas complementares às aulas presenciais) e a materiais didáticos preparados especialmente para o programa.</desc><br>\
+&bullet; Estudou textos e exercícios de várias áreas da Matemática, priorizando a auto-aprendizagem;<br>\
+&bullet; Desenvolveu e escreveu problemas e soluções matemáticos por meio de ferramentas computacionais;<br>\
+&bullet; Apresentou seminários para alunos e professores, exibindo exercícios e teoria matemática.<br>'
+}
+</script> </p>
+
+
+
+
+<h2>Interesses <button type="button" onclick="expand_interests()">expandir</button> </h2> 
+
+<desc>Lista dos meus principais interesses profissionais (independentemente de minha experiência, que está especificada em outras seções) </desc><br>
+
+
+
+
+<a id='interests'>
+
+<h3>Grandes áreas</h3>
+
+Matemática,&ensp;Ciência da Computação,&ensp;Engenharia,&ensp;Linguística,&ensp;Economia,&ensp;Teoria musical <br>
+
+<h3>Atividades</h3>
+Programação,&ensp;Ensino docente,&ensp;Produção de texto,&ensp;Pesquisa,&ensp;Design gráfico<br>
+
+
+<h3>Trabalho atual</h3>
+<desc>Lista de tópicos em que estou trabalhando atualmente ou que devo trabalhar em breve.</desc> <br>
+Sumarização automática de textos opinativos,&ensp;mineração de opinião para resenhas de produtos,&ensp;processamento de texto subjetivo,&ensp;identificação de polaridades de opiniões,&ensp;processamento de texto ruidoso,&ensp;técnicas de otimização combinatorial,&ensp;estudo de métodos de sumarização comparativa de opinião existentes para vários idiomas e vários domínios,&ensp;desenvolvimento de métodos inovadores de sumarização comparativa de opinião,&ensp;desenvolvimento de métodos de avaliação para sumarização comparativa de opinião <br> 
+
+
+<h3>Curiosidades</h3>
+<desc>Lista de tópicos com os quais ainda não trabalhei e que adoraria aprender mais a respeito.</desc> <br>
+Veículos e robôs subaquáticos,&ensp;eletrodomésticos,&ensp;processadores de texto,&ensp;plug-ins de áudio,&ensp;Inteligência Artificial em Economia,&ensp;processadores de computador<br>
+
+</a>
+
+<script>
+function expand_interests() { 
+document.getElementById("interests").innerHTML = " \
+<h3>Grandes áreas</h3>\
+&bullet; Matemática <br> \
+&bullet; Ciência da Computação <br> \
+&bullet; Engenharia <br> \
+&bullet; Linguística <br> \
+&bullet; Economia <br> \
+&bullet; Teoria musical <br> \
+&bullet; Arte <br> \
+ \
+<h3>Atividades</h3> \
+&bullet; Programação<br> \
+&bullet; Ensino docente<br> \
+&bullet; Produção de texto<br> \
+&bullet; Pesquisa<br> \
+&bullet; Design gráfico<br> \
+ \
+<h3>Trabalho atual</h3> \
+<desc>Lista de tópicos em que estou trabalhando atualmente ou que devo trabalhar em breve.</desc> <br> \
+&bullet; Sumarização automática de textos opinativos <br> \
+&bullet; Mineração de opinião para resenhas de produtos <br>  \
+&bullet; Processamento de texto subjetivo em português <br>  \
+&bullet; Identificação de polaridades de opiniões em português <br> \
+&bullet; Processamento de texto ruidoso em português <br>  \
+&bullet; Técnicas de otimização combinatorial <br>  \
+&bullet; Estudo de métodos de sumarização comparativa de opinião existentes para vários idiomas e vários domínios <br>  \
+&bullet; Desenvolvimento de métodos inovadores de sumarização comparativa de opinião <br>  \
+&bullet; Desenvolvimento de métodos de avaliação para sumarização comparativa de opinião <br>  \
+\
+<h3>Curiosidades</h3> \
+<desc>Lista de tópicos com os quais ainda não trabalhei e que adoraria aprender mais a respeito.</desc> <br>  \
+&bullet; Desenvolvimento e teste de veículos subaquáticos<br>\
+&bullet; Desenvolvimento e inovação de eletrodomésticos<br> \
+&bullet; Desenvolvimento de ferramentas de processamento de texto<br> \
+&bullet; Desenvolvimento de plug-ins de áudio<br> \
+&bullet; Inteligência Artificial aplicada à Economia <br> \
+&bullet; Projeto de processadores de computador <br> \
+"
+}
+</script> </p>
+
+
+
+
+
+
+
+<h2>Projetos e Atividades <button type="button" onclick="showall_projects()">expandir tudo</button></a></h2>
+<p>
+
+<b>Estagiário em projeto de Sistema de Mensagens de Áudio</b><br>
+
+&#x1F4CC; Universidade Federal de Mato Grosso do Sul, Campo Grande <br>
+&#x1F4C5; Janeiro 2016 &ndash; Março 2016<br>
+&#x1F552; 160 horas <br>
+&#x1F5E3; Supervisionado pelo doutor <a class='ricardo'>Ricardo Ribeiro dos Santos</a><br>
+<a id="info_LSCAD2016"><button type="button" onclick="showinfo_LSCAD2016()">+info</button></a>
+</p><p>
+
+<script>
+function showinfo_LSCAD2016() {
+document.getElementById("info_LSCAD2016").innerHTML = ' \
+&#x1F3C3; Participou do projeto por toda a sua duração<br> \
+&#x1F465; 3 alunos de Engenharia de Computação na equipe<br> \
+&#x1F3DB; Executado no laboratório <a class="lscad">LSCAD</a> <br> \
+<desc>Foi projetado um sistema de mensagens de áudio composto por conjuntos de controles e tocadores. Cada controle tem vários botões; cada botão, ao ser pressionado, ativa um tocador diferente, que executa uma mensagem de áudio. O projeto foi desenvolvido a pedido da empresa Stamp Midia. À empresa, foram entregues dois protótipos completos do sistema: um para a fase de testes e a versão final. Alguns componentes utilizados foram: Microcontrolador ATMega 328, Transmissor e receptor de rádio WRL-10534 e RWS-371, Chip de gravação e armazenamento de áudio ISD1820.<br></desc>\
+<br>\
+&bullet; Programou (em Arduino) funções usadas pelo tocador e pelo processo de transmissão de dados; <br>\
+&bullet; Testou e adaptou protocolos de transmissão; <br>\
+&bullet; Montou módulo de circuito de gravação; <br>\
+&bullet; Montou circuito de amplificador de áudio; <br>\
+&bullet; Implementou um sistema para economia de energia durante períodos de inatividade; <br>\
+&bullet; Prototipou circuitos com placas de ensaio e com placas perfuradas; <br>\
+&bullet; Soldou componentes em placas de circuito impresso; <br>\
+&bullet; Fez estudos visando obter um produto com baixo consumo de energia. <br>\ '	
+}
+</script> </p>
+
+
+<b>Colaborador de Treinamento Acadêmico em Montagem de Drones</b><br>
+
+&#x1F4CC; <a class="csun">Universidade do Estado da Califórnia, Northridge</a> <br>
+&#x1F4C5; Maio 2015 &ndash; Agosto 2015 <br>
+&#x1F552; 300 horas <br>
+&#x1F5E3; Supervisionado pelo doutor <a href='http://www.csun.edu/~nhuttho/'>Nhut Tan Ho</a><br>
+<a id="info_CSUN2015"><button type="button" onclick="showinfo_CSUN2015()">+info</button></a>
+</p><p>
+<script>
+function showinfo_CSUN2015() {
+document.getElementById("info_CSUN2015").innerHTML = ' \
+&#x1F3C3; Entrou com o projeto em andamento, saiu com o projeto a ser continuado<br> \
+&#x1F465; 5 estudantes de graduação na equipe<br>\
+&#x1F3DB; Executado no laboratório <a class="serl">SERL</a><br>\
+<desc>O objetivo principal do projeto foi projetar, construir e otimizar um veículo aéreo não-tripulado do tipo octocóptero, a partir de estudos e testes feitos no octocóptero Foxtech Kraken 130 e com uso do sistema de pilotagem 3DR Pixhawk. O objetivo do projeto foi alcançado: o veículo desenvolvido foi testado em ambiente interno e limitações de altitude para demonstrar sua capacidade de voo e testar sua estabilidade.</desc>\
+<br>\
+&bullet; Fez pesquisa para encontrar peças necessárias; <br>\
+&bullet; Testou peças individuais; <br>\
+&bullet; Testou interações entre as peças; <br>\
+&bullet; Montou as peças, determinando seus melhores posicionamentos no veículo; <br>\
+&bullet; Fez apresentações para mostrar o andamento do projeto à equipe e a pessoas de fora da equipe; <br>\
+&bullet; Fez apresentações para propor à equipe ideias sobre o rumo do projeto; <br>\
+&bullet; Escreveu documentação sobre as peças e instruções sobre como replicar o trabalho feito; <br>\
+&bullet; Escreveu protocolos de teste; <br>\
+&bullet; Escreveu protocolos de segurança.'
+}
+</script> </p>
+
+
+<b>Desenvolvedor em Sistema de Gerenciamento e Exibição de Mídia Digital com a Plataforma Arduino</b><br>
+
+&#x1F4CC; Universidade Federal de Mato Grosso do Sul, Campo Grande <br>
+&#x1F4C5; Maio 2013 &ndash; Novembro 2013<br>
+&#x1F552; 400 horas <br>
+&#x1F5E3; Supervisionado pelo doutor <a class='ricardo'>Ricardo Ribeiro dos Santos</a><br>
+<a id="info_UFMS2013"><button type="button" onclick="showinfo_UFMS2013()">+info</button></a>
+</p><p>
+<script>
+function showinfo_UFMS2013() {
+document.getElementById("info_UFMS2013").innerHTML = ' \
+&#x1F3C3; Entrou com o projeto em andamento, saiu com o projeto a ser continuado<br>\
+&#x1F465; 4 estudantes de Engenharia de Computação na equipe<br>\
+&#x1F3DB; Executado no laboratório <a class="lscad">LSCAD</a> <br>\
+<desc>O objetivo do projeto foi a implementação de um sistema de hardware e software de baixo custo para geração e gerenciamento de conteúdo para telecomunicação digital, baseando-se na Plataforma Arduino. Um foco do projeto que merece destaque é a reutilização de material que seria descartado: o sistema foi desenvolvido para ser utilizado com um televisor de tubo de raios catódicos (CRT).</desc><br>\
+&bullet; Desenvolveu partes do projeto relacionadas à geração e gerenciamento de mensagens digitais;<br>\
+&bullet; Escreveu códigos de programação para a comunicação entre o Arduino e o televisor;<br>\
+&bullet; Elaborou textos didáticos sobre o trabalho feito no projeto;<br>\
+&bullet; Apresentou pôster na 4ª Escola Regional de Informática de Mato Grosso do Sul.<br>'
+}
+</script> </p>
+
+
+
+
+<b>Monitor no projeto “Despertando Talentos para Computação”</b><br>
+
+&#x1F4CC; Universidade Federal de Mato Grosso do Sul, Campo Grande <br>
+&#x1F4C5; Março 2012 &ndash; Dezembro 2012 <br>
+&#x1F552; 400 horas <br>
+&#x1F5E3; Supervisionado pelo doutor <a class='gonda'>Luciano Gonda</a><br>
+<a id="info_UFMS2012"><button type="button" onclick="showinfo_UFMS2012()">+info</button></a>
+</p><p>
+<script>
+function showinfo_UFMS2012() {
+document.getElementById("info_UFMS2012").innerHTML = ' \
+&#x1F3C3; Participou do projeto por toda a duração dessa edição<br>\
+&#x1F465; 6 estudantes de Computação na equipe, geralmente trabalhando em duplas<br>\
+&#x1F3DB; Executado nas salas de aula e laboratórios da Faculdade de Computação da UFMS<br>\
+<desc>O objetivo do programa é identificar, em todo o estado do Mato Grosso do Sul, estudantes com especial interesse e talento em Computação e motivá-los a seguirem nessa área por meio da participação em competições nacionais e internacionais nessa área.<br>\
+&bullet; Deu aula de algoritmos e programação para alunos do ensino médio;<br>\
+&bullet; Corrigiu provas e atividades sobre algoritmos;<br>\
+&bullet; Avaliou alunos, por meio de atividades propostas por professores de Computação.<br>'
+}
+</script> </p>
+
+<p>
+<b>Monitor da disciplina "Vetores e Geometria Analítica"</b> <br>
+
+&#x1F4CC; Universidade Federal de Mato Grosso do Sul, Campo Grande <br>
+&#x1F4C5; Março 2012 &ndash; Julho 2012 <br>
+&#x1F552; 180 horas <br>
+&#x1F5E3; Supervisionado pela professora <a class='sonia'>Sonia Regina Di Giacomo</a><br>
+<a id="info_monitorvga"><button type="button" onclick="showinfo_monitorvga()">+info</button></a>
+</p><p>
+<script>
+function showinfo_monitorvga() {
+document.getElementById("info_monitorvga").innerHTML = ' \
+&#x1F3DB; Executado em salas de aula da UFMS <br>\
+&bullet; Apresentou soluções de problemas propostos durante as aulas para os alunos da disciplina; <br> \
+&bullet; Lecionou teoria relacionada à disciplina, de acordo com solicitações dos alunos. <br> '
+}
+</script> </p>
+
+
+
+
+
+
+<h2>Eventos <button type="button" onclick="expandEvents()">expandir</button></a></h2>
+<section id='events'>
+
+<p>Workshop comemorativo de 25 anos do Núcleo Interinstitucional de Linguística Computacional</p>
+<p>1º Encontro Paulista dos Pós-Graduandos em Computação<p>
+<p>6º Encontro da Revista do Professor de Matemática</p>
+<p>4ª Escola Regional de Informática de Mato Grosso do Sul</p>
+<p>1º Encontro de Robótica de Mato Grosso do Sul</p>
+<p>Ciclo de Palestras do Programa de Iniciação Científica da OBMEP 2006 em Campo Grande</p>
+<p>1º Encontro dos Alunos dos Programas de Iniciação Científica da OBMEP 2005, da OBMEP 2006 e da OBMEP 2007 do Polo de Campo Grande</p>
+<p>1º Encontro dos Medalhistas de Ouro da Olimpíada Brasileira de Matemática das Escolas Públicas</p>
+
+</section>
+
+
+<script>
+
+function expandEvents()
+{
+  document.getElementById("events").innerHTML = " \
+  <p>\
+<b><a href='events/nilc25/index.html'>Workshop comemorativo de 25 anos do Núcleo Interinstitucional de Linguística Computacional</a></b><br>\
+4 de maio de 2018. &#160;8 horas. &#160;Universidade de São Paulo. &#160;São Carlos, SP. <br>\
+<desc>Em 2018, o NILC completou 25 anos de existência. Para comemorar essa marca, assim como relembrar o passado, compartilhar as pesquisas atuais realizadas pelo grupo e discutir possibilidades para o futuro, realizou-se um workshop comemorativo com participação de professores, pesquisadores, alunos e ex-alunos do grupo.\
+<br>\
+</p>\
+  <p>\
+  <b><a class='eppc1'>1º Encontro Paulista dos Pós-Graduandos em Computação</a></b><br> \
+  4 de dezembro de 2017. &#160;8 horas. &#160;Universidade de São Paulo, &#160;São Carlos, SP. <br>\
+  <desc>A ciência que os pós-graduandos estão produzindo no Estado de São Paulo foi a atração do evento. Uma oportunidade para os alunos apresentarem seus projetos e\ construirem novas possibilidades de colaboração científica. </desc><br> \
+  &bullet; Apresentou <a href='portpholio/poster_EPPC2017/index.html'>pôster</a> sobre o projeto de mestrado \"Sumarização Comparativa de Opinião\".</p>\
+  <p>\
+  <p> \
+  <b>6º Encontro da Revista do Professor de Matemática</b><br> \
+  29 e 30 de novembro de 2013. &#160;16 horas. &#160;Universidade Federal de Mato Grosso do Sul, &#160;Campo Grande, MS. <br>\
+  <desc>Evento composto por palestras, minicursos e oficinas voltados para alunos e professores de cursos de Matemática.</desc></p> \
+  <p>\
+  <b>4ª Escola Regional de Informática de Mato Grosso do Sul</b><br>\
+  28 a 30 de agosto de 2013. &#160;24 horas. &#160;Universidade Federal de Mato Grosso do Sul, &#160;Três Lagoas, MS. <br>\
+  <desc>O evento colocou os participantes em contato com tópicos que estão na vanguarda da pesquisa na área de computação, em\
+  evidência no país e exterior, e foi também um fórum para pesquisadores, estudantes e profissionais de toda a região. </desc><br>\
+  &bullet; Apresentou <a href='portpholio/poster_ERI_2013/index.html'>pôster</a> sobre o sistema de exibição de mídia digital com a plataforma Arduino.\
+  </p>\
+  <p>\
+  <b>1º Encontro de Robótica de Mato Grosso do Sul</b><br>\
+  11 e 12 de agosto de 2012. &#160;12 horas. &#160;Universidade Federal de Mato Grosso do Sul, &#160;Campo Grande, MS. <br>\
+<desc>Constituído de palestras proferidas por pesquisadores renomados da área de Robótica e competições para alunos de ensino \
+médio, o evento buscou proporcionar um ambiente favorável à troca de experiências e conhecimento entre os participantes.</desc> <br> \
+&bullet; Atuou como voluntário na equipe de apoio à organização do evento. \
+</p>\
+<p>\
+<b>Ciclo de Palestras do Programa de Iniciação Científica da OBMEP 2006 em Campo Grande</b><br>\
+2 de agosto de 2008. &#160;6 horas. &#160;Universidade Federal de Mato Grosso do Sul, &#160;Campo Grande, MS. <br>\
+<desc>Evento promovido pela coordenação do Programa de Iniciação Científica Jr. da Olimpíada Brasileira de Matemática das Escolas Públicas em parceria com o Centro de Ciências Exatas e Tecnologia da Universidade Federal de Mato Grosso do Sul. Contou com palestras relacionadas a Matemática apresentadas para os alunos, pais e convidados.  </desc>\
+</p>\
+<p>\
+<b>1º Encontro dos Alunos dos Programas de Iniciação Científica da OBMEP 2005, da OBMEP 2006 e da OBMEP 2007 do Polo de Campo Grande</b><br>\
+2 de agosto de 2008. &#160;4 horas. &#160;Universidade Federal de Mato Grosso do Sul, &#160;Campo Grande, MS. <br>\
+<desc>Evento promovido pela coordenação do Programa de Iniciação Científica Jr. da Olimpíada Brasileira de Matemática das Escolas Públicas em parceria com o Centro de Ciências Exatas e Tecnologia da Universidade Federal de Mato Grosso do Sul. O evento teve por objetivo promover o encontro e confraternização de todos os alunos de Campo Grande que participaram de alguma edição do Programa de Iniciação Científica. </desc>\
+</p>\
+<p>\
+<b>1º Encontro dos Medalhistas de Ouro da Olimpíada Brasileira de Matemática das Escolas Públicas</b><br>\
+28 de janeiro a 4 de fevereiro de 2007. &#160;Hotel Bucsky,  &#160;Nova Friburgo, RJ &#160;/&#160; IMPA, &#160;Rio de Janeiro, RJ. <br>\
+<desc>Reuniu os 300 medalhistas de ouro da Olimpíada Brasileira de Matemática das Escolas Públicas edição 2005 para um treinamento intensivo com cursos e palestras junto a uma equipe de professores de matemática de várias universidades do Brasil.</desc>\
+"  
+}
+</script>
+
+
+
+<h2>Prêmios</h2>
+
+<p>
+<b>Association for Computing Machinery International Collegiate Programação Contest</b> <br>
+&bullet; Segundo lugar na primeira fase da XVII Maratona de Programação no estado de Mato Grosso do Sul (2012). Em equipe com Lucas Tsutsui e Daniela Ridel. <br>
+</p>
+
+<p>
+<b>Olimpíada Brasileira de Matemática das Escolas Públicas</b> <br>
+&bullet; 1 medalha de ouro (2005) <br>
+&bullet; 3 medalhas de prata (2006, 2009, 2010) <br>
+&bullet; 1 medalha de bronze (2007) <br>
+</p>
+
+<!--
+<h2>Documents</h2>
+<p><a href="http://www.csce.uark.edu/~rrochada/resume.pdf">R&eacute;sum&eacute;</a></p> 
+-->
+
+
+
+<h2>Idiomas</h2>
+&bullet; Português brasileiro (nativo) <br>
+&bullet; Inglês americano (fluente) <br>
+&bullet; Espanhol (intermediário) <br>
+
+
+
+<h2>Curiosidades</h2>
+<p>
+&bullet; Adora tocar flauta doce; <br>
+&bullet; Adora seus vizinhos, que nunca reclamam da flauta doce; <br>
+&bullet; Consegue escrever espelhado; <br>
+&bullet; Quer fazer amizade com um chimpanzé um dia; <br>
+&bullet; Tem orgulho de nunca ter perdido uma meia ao lavar roupa; <br>
+&bullet; Fez um recorde de 72 pontos no Flappy Bird; <br>
+&bullet; Vê branco e dourado no vestido. <br>
+</p>
+
+<h2>Contato</h2>
+<p><b>
+
+<script language="JavaScript">
+var word = ""
+word += String.fromCharCode(69);
+word += String.fromCharCode(45);
+word += String.fromCharCode(109);
+word += String.fromCharCode(97);
+word += "il:"
+document.write(word);
+</script>
+
+</b> <a id="ML"><button type="button" onclick="ShowMl()" style="height:2.7ex">mostrar</button>
+
+
+<p><a href="https://www.linkedin.com/pub/raphael-rocha-da-silva/b3/7ab/779"><b>Linkedin</b></a></p>
+<br>
+
+
+
+
+
+</div>
+
+<div id="footer">
+Atualizado em: Maio de 2018 </p>
+</div>
+
+
+</body>
+
+
+</html>
+
+
+
+<!--<STYLE TYPE="text/css" MEDIA="screen, projection">
+  @import url(index.css);
+  DT { background: yellow; color: black }
+-->
+<!-- </STYLE> -->
+
+
+
+
+
+
+
+<script>
+
+function ShowMl() {
+var part1 = String.fromCharCode(114);
+part1 += "aph";
+var part2 = "silva";
+var part3 = "usp";
+part3 += "";
+var linktext = part1 + "" + part2 + "@" + part3;
+part1 = "arara";
+document.getElementById("ML").innerHTML = linktext;
+document.getElementById("ML").innerHTML += ".br"
+}
+
+
+var showCoursesUFMS = 0;
+function DisplayClassesUFMS() {
+	if (showCoursesUFMS == 0) {
+		showCoursesUFMS = 1;
+		document.getElementById("classesUFMSword").innerHTML = "ocultar";
+		document.getElementById("classesUFMS").innerHTML = ' \
+<p style="margin-left: 36px" align="left">\
+<b> Computação: </b><br>\
+Algoritmos e programação (2 semestres)<br>\
+Estruturas de dados e programação<br>\
+Desafios de programação<br>\
+Análise de algoritmos<br>\
+Linguagem de montagem<br>\
+Compiladores<br>\
+Arquitetura de computadores (2 semestres)<br>\
+Simulações em sistemas multiprocessados (Tópicos em Arquitetura de Computadores)<br>\
+Linguagens formais e autômatos<br>\
+Fundamentos de teoria da Computação<br>\
+Introdução à Engenharia de Computação<br>\
+Introdução a sistemas digitais<br>\
+Microcontroladores e aplicações<br>\
+Laboratório de hardware<br>\
+Métodos numéricos<br>\
+Sistemas operacionais<br>\
+Transmissão de dados e comunicação<br>\
+Banco de dados<br>\
+<br>\
+<b> Engenharia Elétrica: </b><br>\
+Controle e servomecanismo<br>\
+Circuitos elétricos<br>\
+Circuitos eletrônicos<br>\
+Análise de sinais e sistemas<br>\
+<br>\
+<b> Matemática: </b><br>\
+Cálculo (3 semestres)<br>\
+Equações diferenciais<br>\
+Vetores e Geometria Analítica<br>\
+Álgebra linear<br>\
+Probabilidade e Estatística<br>\
+<br>\
+<b> Física: </b><br>\
+Física (3 semestres)<br>\
+Laboratório de Física (2 semestres)<br>\
+Mecânica aplicada<br>\
+Mecânica dos sólidos<br>\
+Fundamentos de fenômenos de transporte<br>\
+<br>\
+<b> Outros: </b><br>\
+Fundamentos de Química<br>\
+Sociedade e meio ambiente<br>\
+Desenho por computador<br>\
+Economia<br>\
+Fundamentos de Administração<br>\
+Empreendedorismo<br>\
+		</p>';
+	}
+	else {
+		showCoursesUFMS = 0;
+		document.getElementById("classesUFMS").innerHTML = "";
+		document.getElementById("classesUFMSword").innerHTML = "ver";
+	}	
+}
+
+
+function showall_projects()
+{
+  showinfo_LSCAD2016();
+  showinfo_CSUN2015();
+  showinfo_UFMS2013();
+  showinfo_UFMS2012();
+  showinfo_monitorvga();
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="reference_links.js"></script>
+<script>
+updateLinks()
+document.onclick=function(){updateLinks();}; /* To update when expand buttons are pressed. */
+</script>

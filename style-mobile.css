@@ -1,0 +1,103 @@
+/* Made by Raphael Rocha da Silva. 2015. 
+ * raphael.neocities.org */
+
+<style>
+mobile
+#first{
+}
+
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px; 
+}
+#section {
+/* 	width:900px; */
+    float:left;
+    
+    background-color:#979797;
+    padding:10px; 
+	font-family: Arial;
+	line-height: 120%;
+}
+#header {
+    float:center;
+    padding:10px; 
+	font-family: Arial;
+	line-height: 150%;
+}
+#footer {
+/* 	width:1000px; */
+    float:center;
+    color:gray;
+    clear:both;
+    text-align:center;
+    padding:3px;
+	font-size: 14;
+}
+
+h1 { 
+    display: block;
+    font-size: 2em;
+    line-height: 102%;
+    margin-top: 0.67em;
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+	padding-top: 0.4em;
+	border-top: thick double #737373;
+}
+
+h3 { 
+    display: block;
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+p {
+	font-size: 1em;
+	margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+desc {
+	font-size: .96em;
+	line-height: 100%;
+	display:inline-block;
+	margin-left: 0em;
+
+}
+
+
+</style>
+
+
+/* Made by Raphael Rocha da Silva. 2015. 
+ * raphael.neocities.org */

@@ -1,0 +1,125 @@
+/* Made by Raphael Rocha da Silva. 2015. 
+ * raphael.neocities.org */
+
+
+
+<style>
+
+#first{
+}
+
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px; 
+}
+#section {
+	width:880px;
+    float:left;
+    padding:20px; 
+	font-family: Arial;
+	line-height: 120%;
+	
+}
+#header {
+	width:900px;
+    float:center;
+    padding:10px; 
+	font-family: Arial;
+	line-height: 150%;
+}
+#footer {
+	width:900px;
+    float:left;
+    color:gray;
+    clear:both;
+    text-align:center;
+    padding:3px;
+	font-size: 14;
+}
+
+h1 { 
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+	padding-top: 0.4em;
+	border-top: thick double #737373;
+}
+
+h3 { 
+    display: block;
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+p {
+	font-size: 1em;
+	margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+desc {
+	font-size: .96em;
+	line-height: 100%;
+	display:inline-block;
+	margin-left: 0em;
+    width: 50em;
+
+}
+
+
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration-color: #adc9f4;
+/*     text-decoration-style: dotted; */
+}
+
+/* visited link */
+a:visited {
+    color: black;
+    text-decoration: lightgray;
+    text-decoration-style: dotted;
+}
+
+/* mouse over link */
+a[href]:hover {
+    color: blue;
+}
+
+/* selected link */
+a[href]:active {
+    color: red;
+}
+
+
+</style>
+
+
+/* Made by Raphael Rocha da Silva. 2015. 
+ * raphael.neocities.org */
