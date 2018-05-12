@@ -1,8 +1,12 @@
-/* Made by Raphael Rocha da Silva. 2015. 
- * raphael.neocities.org */
+/* Made by Raphael Rocha da Silva. 2015-2018. 
+ * raphsilva.github.io */
 
 <style>
 mobile
+* {
+ font-size: 100%;
+ font-family: carlito;
+}
 #first{
 }
 
@@ -24,15 +28,17 @@ header {
 /* 	width:900px; */
     float:left;
     
-    background-color:#979797;
+    background-color:#BBBBBB;
     padding:10px; 
-	font-family: Arial;
+    padding-top:50px; 
+	font-family: carlito;
 	line-height: 120%;
 }
 #header {
+    background-color:#DDDDDD;
     float:center;
     padding:10px; 
-	font-family: Arial;
+	font-family: carlito;
 	line-height: 150%;
 }
 #footer {
@@ -43,6 +49,7 @@ header {
     text-align:center;
     padding:3px;
 	font-size: 14;
+        font-family: Arial;
 }
 
 h1 { 
@@ -87,13 +94,53 @@ p {
     margin-right: 0;
 }
 
-desc {
+/*desc {
 	font-size: .96em;
 	line-height: 100%;
 	display:inline-block;
-	margin-left: 0em;
+	margin-left: 0em;*/
+
+/* } */
+
+desc {
+    font-size: 90%;
+    line-height: 110%;
+    display:inline-block;
+    margin-left: 0em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    text-align: justify;
 
 }
+
+
+originallang {
+    font-size: 95%;
+    line-height: 100%;
+    color: #624c66;
+    display:inline-block;
+    margin-top: -.20em;
+    
+    
+    
+}
+
+
+
+emoji {
+  color: transparent;  
+  text-shadow: 0 0 0 back;
+  width: 1.3em;
+  max-width: 2em;
+  display: inline-block;
+}
+
+br {
+            display: block; /* makes it have a width */
+            content: ""; /* clears default height */
+            margin-top: .5em; /* change this to whatever height you want it */
+}
+
 
 
 </style>

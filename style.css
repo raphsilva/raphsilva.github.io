@@ -1,9 +1,14 @@
-/* Made by Raphael Rocha da Silva. 2015. 
- * raphael.neocities.org */
+/* Made by Raphael Rocha da Silva. 2015-2018. 
+ * raphsilva.github.io */
 
-
+tab0  { &ensp;   }
 
 <style>
+
+
+/*tab1  { position:absolute;left:50px;  }
+tab2  { position:absolute;left:75px;  }*/
+
 
 #first{
 }
@@ -17,28 +22,31 @@
     padding:5px; 
 }
 #section {
-	width:880px;
+    width:880px;
     float:left;
     padding:20px; 
-	font-family: Arial;
-	line-height: 120%;
+    padding-left: 50px;
+    font-family: Carlito, Arial, sans;
+    line-height: 140%;
 	
 }
 #header {
-	width:900px;
+    width:900px;
     float:center;
-    padding:10px; 
-	font-family: Arial;
-	line-height: 150%;
+    padding:15px; 
+    padding-left: 20px;
+    font-family: Carlito, Arial, sans;
+    line-height: 150%;
+    margin-bottom: 2em;
 }
 #footer {
-	width:900px;
+    width:900px;
     float:left;
     color:gray;
     clear:both;
     text-align:center;
     padding:3px;
-	font-size: 14;
+    font-size: 14;
 }
 
 h1 { 
@@ -49,7 +57,7 @@ h1 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-	text-align: center;
+    text-align: center;
 }
 
 h2 {
@@ -60,8 +68,9 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-	padding-top: 0.4em;
-	border-top: thick double #737373;
+    padding-top: 0.4em;
+    border-top: thick double #737373;
+    
 }
 
 h3 { 
@@ -75,20 +84,52 @@ h3 {
 }
 
 p {
-	font-size: 1em;
-	margin-top: 1.3em;
+    font-size: 1em;
+    margin-top: 1.3em;
     margin-bottom: 1.3em;
     margin-left: 0;
     margin-right: 0;
 }
 
 desc {
-	font-size: .96em;
-	line-height: 100%;
-	display:inline-block;
-	margin-left: 0em;
+    font-size: 90%;
+    line-height: 110%;
+    display:inline-block;
+    margin-left: 0em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
     width: 50em;
+    text-align: justify;
+}
 
+originallang {
+    font-size: 95%;
+    line-height: 100%;
+    color: #624c66;
+    display:inline-block;
+    margin-top: -.20em;
+    
+    
+    
+}
+
+
+
+emoji {
+  color: transparent;  
+  text-shadow: 0 0 0 black;
+/*   margin-right: .5em; */
+  width: 1.3em;
+  max-width: 2em;
+  display: inline-block;
+}
+
+
+
+br {
+            display: block; /* makes it have a width */
+            content: ""; /* clears default height */
+            margin-top: .1em; /* change this to whatever height you want it */
 }
 
 
