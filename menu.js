@@ -17,12 +17,12 @@ function menuwrite(text, destination_page)
 //     console.log(window.location.href)
     
     mainAddress = location.protocol + '//' + location.host;
-    destAddress = mainAddress + '/' + destination_page
+    destAddress = mainAddress + '/' + destination_page;
     
-    console.log(destAddress)
+    console.log(destAddress);
     
     if (destAddress == window.location.href)
-        return "<b>"+text+"</b>"
+        return "<b>"+text+"</b>";
     else
         return "<a href='/"+destination_page+"'>"+text+"</a>";
 

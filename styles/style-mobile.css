@@ -2,11 +2,37 @@
  * raphsilva.github.io */
 
 <style>
+
+
+
+
+
+
+@font-face {
+   font-family: 'Carlito'; 
+   font-weight: bold; 
+   src: url('fonts/Carlito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Carlito'; 
+   src: url('fonts/Carlito-Regular.ttf') format('truetype');
+}
+
+ 
+
+
+
 mobile
 * {
- font-size: 100%;
- font-family: carlito;
+ font-size: 12pt;
+ font-family: Carlito, Arial, sans;
 }
+
+body{
+    margin:0;
+}
+
 #first{
 }
 
@@ -22,24 +48,53 @@ header {
     height:300px;
     width:100px;
     float:left;
-    padding:5px; 
+    margin:0;
+    padding:5px;
 }
+
+
+
+
 #section {
-/* 	width:900px; */
     float:left;
-    
+    border-top-style: groove;
+    padding:10px;
     background-color:#BBBBBB;
-    padding:10px; 
-    padding-top:50px; 
-	font-family: carlito;
-	line-height: 120%;
+    font-family: Carlito, Arial, sans;
+    line-height: 130%;
 }
+
+
+#section:before {
+  content: "R A P H A E L \00a0 R O C H A  \00a0 D A  \00a0 S I L V A";
+  font-weight: bold;
+  color: gray;
+  margin-top: -.20em;
+  margin-bottom: 2em;
+  display: block;
+  text-align: justify;
+ 
+  text-align-last: justify;
+  text-justify: inter-character;
+}
+
+text {
+    font-size: 98%;
+    line-height: 125%;
+    display:inline-block;
+    margin-left: 0.0em;
+    margin-top: 0.0em;
+    margin-bottom: 0.0em;
+    text-align: justify;
+}
+
+
 #header {
     background-color:#DDDDDD;
     float:center;
     padding:10px; 
-	font-family: carlito;
-	line-height: 150%;
+    font-family: Carlito, Arial, sans;
+    line-height: 150%;
 }
 #footer {
 /* 	width:1000px; */
@@ -48,13 +103,13 @@ header {
     clear:both;
     text-align:center;
     padding:3px;
-	font-size: 14;
-        font-family: Arial;
+    font-size: 14;
+    
 }
 
 h1 { 
     display: block;
-    font-size: 2em;
+    font-size: 1.7em;
     line-height: 102%;
     margin-top: 0.67em;
     margin-bottom: 1.5em;
@@ -66,7 +121,7 @@ h1 {
 
 h2 {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
     margin-left: 0;
@@ -116,10 +171,10 @@ desc {
 
 originallang {
     font-size: 95%;
-    line-height: 100%;
-    color: #624c66;
+    line-height: 90%;
+    color: #3c343d;
     display:inline-block;
-    margin-top: -.20em;
+    margin-top: -.40em;
     
     
     
@@ -133,12 +188,13 @@ emoji {
   width: 1.3em;
   max-width: 2em;
   display: inline-block;
+  text-align: left;
 }
 
 br {
             display: block; /* makes it have a width */
             content: ""; /* clears default height */
-            margin-top: .5em; /* change this to whatever height you want it */
+            margin-top: .4em; /* change this to whatever height you want it */
 }
 
 
@@ -146,5 +202,5 @@ br {
 </style>
 
 
-/* Made by Raphael Rocha da Silva. 2015. 
- * raphael.neocities.org */
+/* Made by Raphael Rocha da Silva. 2015-2018. 
+ * raphsilva.github.io */

@@ -1,9 +1,28 @@
 /* Made by Raphael Rocha da Silva. 2015-2018. 
  * raphsilva.github.io */
 
+
 tab0  { &ensp;   }
 
+
+
 <style>
+
+
+
+
+@font-face {
+   font-family: 'Carlito'; 
+   font-weight: bold; 
+   src: url('fonts/Carlito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Carlito';   
+   src: url('fonts/Carlito-Regular.ttf') format('truetype');
+}
+
+
 
 
 /*tab1  { position:absolute;left:50px;  }
@@ -11,6 +30,11 @@ tab2  { position:absolute;left:75px;  }*/
 
 
 #first{
+}
+
+* {
+   font-size: 18px;
+   line-height: 125%;
 }
 
 #nav {
@@ -22,14 +46,33 @@ tab2  { position:absolute;left:75px;  }*/
     padding:5px; 
 }
 #section {
-    width:880px;
+    width:auto;
+    max-width:880px;
+    border-top-style: groove;
     float:left;
-    padding:20px; 
-    padding-left: 50px;
+    padding:10px;
+    padding-top:50px;
+    margin-left: 50px;
     font-family: Carlito, Arial, sans;
     line-height: 140%;
 	
 }
+
+
+#section:before {
+  content: "R A P H A E L \00a0 R O C H A  \00a0 D A  \00a0 S I L V A";
+  font-weight: bold;
+  color: gray;
+  margin-top: -4em;
+  margin-bottom: 2em;
+  display: block;
+  text-align: justify;
+  max-width: 880px;
+  
+  text-align-last: justify;
+  text-justify: inter-character;
+}
+
 #header {
     width:900px;
     float:center;
@@ -39,14 +82,16 @@ tab2  { position:absolute;left:75px;  }*/
     line-height: 150%;
     margin-bottom: 2em;
 }
+
 #footer {
-    width:900px;
     float:left;
+    width: 880px;
+    max-width: 100vw;
     color:gray;
     clear:both;
     text-align:center;
     padding:3px;
-    font-size: 14;
+    font-size: 12pt; 
 }
 
 h1 { 
@@ -84,11 +129,8 @@ h3 {
 }
 
 p {
-    font-size: 1em;
     margin-top: 1.3em;
     margin-bottom: 1.3em;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 desc {
@@ -99,8 +141,26 @@ desc {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
     width: 50em;
+    text-align: justify;    
+}
+
+text {
+    font-size: 98%;
+    line-height: 125%;
+    display:inline-block;
+    margin-left: 0.0em;
+    margin-top: 0.0em;
+    margin-bottom: 0.0em;
+    width: 46em;
     text-align: justify;
 }
+text p {
+    font-size: 98%;
+    line-height: 125%;
+    margin-top: .6em;
+    margin-bottom: .6em;
+}
+
 
 originallang {
     font-size: 95%;
@@ -122,6 +182,7 @@ emoji {
   width: 1.3em;
   max-width: 2em;
   display: inline-block;
+  text-align: center;
 }
 
 
@@ -162,5 +223,5 @@ a[href]:active {
 </style>
 
 
-/* Made by Raphael Rocha da Silva. 2015. 
- * raphael.neocities.org */
+/* Made by Raphael Rocha da Silva. 2015-2018. 
+ * raphsilva.github.io */

@@ -1,0 +1,82 @@
+<meta charset="UTF-8">
+<br>
+Page not found.
+<br>
+Go back <a href='/'><b>home</b></a>?
+<br>
+<br>
+
+
+
+
+
+<script>
+    
+    function similarity (u, v){
+        var sum = 0;
+        var total = 0;
+        for (var i=0; i<u.length; i++){
+            for (var j=0; j<v.length; j++){
+                if (u[i] == v[j]){
+                    sum++;
+                }                
+            }
+            total++;
+        }
+        for (var j=0; j<v.length; j++){
+            for (var i=0; i<u.length; i++){            
+                if (u[i] == v[j]){
+                    sum++;
+                }                
+            }
+            total++;
+        }
+        console.log(u + ' ' + v + ' ' + sum + '/' + total + '=' + sum/total)
+        return sum/total;
+    }
+    
+    var sitemap = [];
+    sitemap.push('http://raphsilva.github.io/projects/ol');
+    sitemap.push('http://raphsilva.github.io/projects/404');
+    sitemap.push('http://raphsilva.github.io/projects/cos');
+    
+    
+    
+    curLocation = window.location;
+    thisAddress = curLocation.href;
+    
+    //console.log(thisAddress);
+     
+    possibleSearches = thisAddress.split('/');
+    for (i=0; i<possibleSearches.length; i++){
+        s = possibleSearches[i];
+        if (s == location.protocol || s == location.host || s.length < 2)
+            continue;        
+        //console.log('s: '+s);
+        
+        for (p=0; p<sitemap.length; p++) {
+            sitemapEntryPieces = sitemap[p].split('/');
+            for (j=0; j<sitemapEntryPieces.length; j++) {                
+                t = sitemapEntryPieces[j];
+                //console.log('t: '+t);
+                if (t == location.protocol || t == location.host || t.length < 2)
+                    continue;
+                score = similarity(s,t); 
+                if (score > 0.5){
+                    document.write("<br>Maybe you're looking for: <b> <a href='" + sitemap[p] + "'>" + sitemap[p] + "</a></b><br>");
+                    //console.log("FOUND  " + s + t)
+                }
+                
+            }
+        }
+        
+        
+    }
+    
+    
+    
+    
+   
+    
+    
+</script>

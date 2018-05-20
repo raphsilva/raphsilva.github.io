@@ -1,32 +1,32 @@
-var ids = []
-var fullnames = []
-var shortnames = []
-var addresses = []
+var ids = [];
+var fullnames = [];
+var shortnames = [];
+var addresses = [];
 
-ids.push("ricardo")
-fullnames.push("Ricardo Ribeiro dos Santos")
-shortnames.push("Ricardo Ribeiro dos Santos")
-addresses.push('http://lattes.cnpq.br/6970175851174735')
+ids.push("ricardo");
+fullnames.push("Ricardo Ribeiro dos Santos");
+shortnames.push("Ricardo Ribeiro dos Santos");
+addresses.push('http://lattes.cnpq.br/6970175851174735');
 
-ids.push("nhutho")
-fullnames.push("Nhut Tan Ho")
-shortnames.push("Nhut Tan Ho")
-addresses.push('http://www.csun.edu/~nhuttho/5')
+ids.push("nhutho");
+fullnames.push("Nhut Tan Ho");
+shortnames.push("Nhut Tan Ho");
+addresses.push('http://www.csun.edu/~nhuttho/5');
 
-ids.push("sonia")
-fullnames.push("Sonia Regina Di Giacomo")
-shortnames.push("Sonia Di Giacomo")
-addresses.push('http://lattes.cnpq.br/4952834714565263')
+ids.push("sonia");
+fullnames.push("Sonia Regina Di Giacomo");
+shortnames.push("Sonia Di Giacomo");
+addresses.push('http://lattes.cnpq.br/4952834714565263');
 
-ids.push("tamarozzi")
-fullnames.push("Antonio Carlos Tamarozzi")
-shortnames.push("Antonio Tamarozzi")
-addresses.push('http://lattes.cnpq.br/1509581503800531')
+ids.push("tamarozzi");
+fullnames.push("Antonio Carlos Tamarozzi");
+shortnames.push("Antonio Tamarozzi");
+addresses.push('http://lattes.cnpq.br/1509581503800531');
 
-ids.push("fernandosouza")
-fullnames.push("Fernando Pereira de Souza")
-shortnames.push("Fernando de Souza")
-addresses.push('http://lattes.cnpq.br/4276784427403123')
+ids.push("fernandosouza");
+fullnames.push("Fernando Pereira de Souza");
+shortnames.push("Fernando de Souza");
+addresses.push('http://lattes.cnpq.br/4276784427403123');
 
 ids.push("celsocardoso")
 fullnames.push("Celso Cardoso")
