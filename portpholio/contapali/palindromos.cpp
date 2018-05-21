@@ -2,6 +2,9 @@
 // Ele imprime a quantidade de números palíndromos que existem entre A e B, inclusive.
 // Este programa termina quando A=B=0.
 
+// Raphael Rocha da Silva. Março de 2016. 
+// Informações em: http://raphsilva.github.io 
+
 
 #include <iostream>
 using namespace std;
@@ -72,7 +75,7 @@ int contaPaliDigsMenor (int N)
   
   if (D%2==0) {
     c = (Ma-1)-M0 +1;           // Conta todos os palíndromos cuja primeira metade seja menor que Ma.
-    if (reflexo(Ma) < Mb) {    // Se o reflexo de Ma for menor que Mb, 
+    if (reflexo(Ma) < Mb) {     // Se o reflexo de Ma for menor que Mb, 
       c++;                      // Conta o palíndromo cuja primeira metade é igual a Ma.
     }
   }
@@ -80,7 +83,7 @@ int contaPaliDigsMenor (int N)
     int M = (N/pow(10,D/2))%10;;   // Dígito do meio
     c = ((Ma-1)-M0 +1)*10;         // Conta todos os palíndromos cuja primeira metade seja menor que Ma.
     c += M;                        // Conta os palíndromos cuja primeira metade seja igual a Ma e cujo dígito do meio seja menor que M
-    if (reflexo(Ma) < Mb) {       // Se o reflexo de Ma for menor que Mb, 
+    if (reflexo(Ma) < Mb) {        // Se o reflexo de Ma for menor que Mb, 
       c++;                         // Conta o palíndromo cuja primeira metade é igual a Ma e cujo dígito do meio é igual a M
     }
   }
@@ -119,7 +122,3 @@ int main ()
     
   }  
 }
-
-
-// Raphael Rocha da Silva. Março de 2016. 
-// Informações em: http://raphael.neocities.org
