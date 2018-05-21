@@ -88,10 +88,13 @@ sitemap.push('http://raphsilva.github.io/index.html');
     thisAddress = curLocation.href;
     
     //console.log(thisAddress);
+    
+    alreadyPut = new Array(sitemap.length).fill(0);
      
+
     possibleSearches = thisAddress.split('/');
     for (i=0; i<possibleSearches.length; i++){
-        s = possibleSearches[i];
+        s = possibleSearches[i].split('.')[0];
         if (s == location.protocol || s == location.host || s.length < 2)
             continue;        
         //console.log('s: '+s);
@@ -104,7 +107,8 @@ sitemap.push('http://raphsilva.github.io/index.html');
                 if (t == location.protocol || t == location.host || t.length < 2)
                     continue;
                 score = similarity(s,t); 
-                if (score > 0.5){
+                if (score > 0.5 && alreadyPut[p] == 0){
+                    alreadyPut[p] = 1;
                     document.write("<br>Maybe you're looking for: <b> <a href='" + sitemap[p] + "'>" + sitemap[p] + "</a></b><br>");
                     //console.log("FOUND  " + s + t)
                 }
