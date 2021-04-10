@@ -76,7 +76,21 @@
 </style>
 
 <header>
-    <title>Título</title>
+  <script>
+    /**
+    * Função que acompanha um clique em um link externo no Google Analytics.
+    * Essa função processa uma string de URL válida como um argumento e usa essa string de URL
+    * como o rótulo do evento. Ao definir o método de transporte como 'beacon', o hit é enviado
+    * usando 'navigator.sendBeacon' em um navegador compatível.
+    */
+    var captureOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    </script>
+    <title>O Cachorro Bin</title>
 </header>
 
 <body>
