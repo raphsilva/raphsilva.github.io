@@ -1,4 +1,4 @@
-document.write(menuwrite_HOME()  +" | "+  menuwrite_PORTPHOLIO() );
+document.write(menuwrite_HOME()  +" | "+  menuwrite_PORTPHOLIO() +" | "+  menuwrite_LINKS() );
 
 
 
@@ -44,6 +44,11 @@ function menuwrite_HOME()
 function menuwrite_PORTPHOLIO()
 {
     return menuwrite('Produção Acadêmica', 'portpholio/index.html');
+}
+
+function menuwrite_LINKS()
+{
+    return menuwrite('Outros links', 'links.html');
 }
     
 
