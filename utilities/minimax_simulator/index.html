@@ -32,7 +32,7 @@
 		font: 62.5% "Trebuchet MS", sans-serif;
 		color: #666;
 	}
-	
+
 	#divOpcoes {
 		display: none;
 		border: 1px solid gray;
@@ -90,13 +90,14 @@
 				<li><a href="#" onclick="limpaValoresEQuebras()">Clean values</a></li>
 				<li><a href="#" onclick="excluirTudo()">Delete all</a></li>
 				<li><a href="#" onclick="gerarExemplo()">Generate example</a></li>
+				<li><a href="#" onclick="$('#dialog-import').dialog('open')">Import JSON</a></li>
 			</ul>
 		</li>
 		<li>
 			<a href="#">Execute</a>
 			<ul>
 				<li>
-					<a href="#" onclick="criaMiniMax()">MiniMax</a>		
+					<a href="#" onclick="criaMiniMax()">MiniMax</a>
 				</li>
 				<li>
 					<a href="#" onclick="criaPoda()">Alpha-Beta prunning</a>
@@ -107,7 +108,7 @@
 			<a href="#">Help</a>
 			<ul>
 				<li>
-					<a href="http://www.youtube.com/watch?v=ceU9sNFaSM8" target="_blank">Video</a>		
+					<a href="http://www.youtube.com/watch?v=ceU9sNFaSM8" target="_blank">Video</a>
 				</li>
 				<li>
 					<a href="#" onclick="$('#dialog-sobre').dialog('open')">About</a>
@@ -121,14 +122,14 @@
 		<li style="margin-right: 20px; position: relative; top: 0px; left: 0px; display: none;" id="menu_execucao">
 			<img onclick="executarPassoAnterior()" src="images/previous.png" style="width: 24px; position: absolute; top: 1px; left: 350px;" title="Previous" />
 			<img onclick="executarProximoPasso()" src="images/next.png" style="width: 24px; position: absolute; top: 1px; left: 384px;" title="Next" />
-			
+
 			<button onclick="executarFinal()" style="position: absolute; left: 418px; top: -2px; width: 110px;">See result</button>
 			<button onclick="finalizarExecucao()" style="position: absolute; left: 540px; top: -2px; width: 140px;">End execution</button>
 		</li>
 	</ul>
 	<div id="main">
 
-		<canvas width="1000" height="600" id="drawing" style="position: relative; top:0px; left:0px;"> 
+		<canvas width="1000" height="600" id="drawing" style="position: relative; top:0px; left:0px;">
 		Your browser must be very old. It provides no canvas support.
 		</canvas>
 	</div>
@@ -152,19 +153,19 @@
 			Jonathan Ramon Peixoto - johnniepeixoto@gmail.com<br/>
 			Luiz Gustavo Rupp - luizrupp@hotmail.com
 		</p>
-				
+
 		<p style="text-align: right;">
 			<br/>
 			December 2012
-			
+
                 <p style="text-align: center;">
 			<br/>
 			Translated from Portuguese to English by Raphael da Silva in September 2016.
 		</p>
 		</p>
 	</div>
-	
-	
+
+
 	<div id="dialog-license" title="License">
 		The MIT License (MIT)<br>
                 <br>
@@ -188,8 +189,210 @@
                 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 	</div>
-	
-	
-</body>
 
+
+	<div id="dialog-import" title="Import tree (JSON)">
+		<p>
+			Paste a JSON representation of a tree into the textarea below. Use the schema shown and make sure leaf nodes (nodes without "children") have numeric "value" fields.
+		</p>
+		<p style="font-size: 12px; margin: 0 0 10px 0;">
+			JSON schema (example):
+		</p>
+		<pre style="background: #f8f8f8; padding: 8px; margin: 0 0 10px 0; border: 1px solid #ddd;">
+{
+  "value": null,
+  "children": [
+    {
+      "value": null,
+      "children": [
+        { "value": 8 },
+        { "value": 23 }
+      ]
+    },
+    {
+      "value": null,
+      "children": [
+        { "value": -47 },
+        { "value": 28 }
+      ]
+    }
+  ]
+}
+		</pre>
+		<p style="font-size: 12px; margin: 6px 0 4px 0;"><em>Tip: Press Ctrl+Enter (Cmd+Enter on macOS) inside the textarea to import.</em></p>
+		<textarea id="treeJsonInput" style="width: 100%; height: 180px; font-family: monospace; font-size: 12px;">{
+  "value": null,
+  "children": [
+    {
+      "value": null,
+      "children": [
+        { "value": 8 },
+        { "value": 23 }
+      ]
+    },
+    {
+      "value": null,
+      "children": [
+        { "value": -47 },
+        { "value": 28 }
+      ]
+    }
+  ]
+}</textarea>
+		<p style="text-align: right; margin-top: 8px;">
+			<button id="btnImportJson" title="Import JSON (Ctrl+Enter)">Import</button>
+			<button id="btnCancelImport">Cancel</button>
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		// Create import dialog and import function
+		$(function() {
+			$("#dialog-import").dialog({
+				autoOpen: false,
+				width: 700,
+				height: 520,
+				modal: true,
+				resizable: true,
+				show: "slide",
+				hide: "explode",
+				open: function(event, ui) {
+					// focus the textarea so the user can paste immediately
+					$("#treeJsonInput").focus();
+					// bind Ctrl/Cmd + Enter to import
+					$("#treeJsonInput").on('keydown.importShortcut', function(e) {
+						if ((e.ctrlKey || e.metaKey) && e.keyCode === 13) {
+							$("#btnImportJson").click();
+							e.preventDefault();
+						}
+					});
+				},
+				close: function(event, ui) {
+					// remove binding on close to avoid duplicate handlers
+					$("#treeJsonInput").off('keydown.importShortcut');
+				}
+			});
+
+			// Build tree using existing global functions in main.js
+			function buildFromJsonNode(jsonNode, parentPk) {
+				if (!jsonNode) return;
+				if (!Array.isArray(jsonNode.children) || jsonNode.children.length === 0) {
+					return;
+				}
+				for (var i = 0; i < jsonNode.children.length; i++) {
+					// create new child on the parent using existing function
+					adicionarFilho(parentPk);
+					var newNode = nodos[nodos.length - 1];
+					var child = jsonNode.children[i];
+
+					// set value if provided
+					if (typeof child.value !== 'undefined') {
+						if (child.value === null) {
+							newNode.valor = null;
+						} else {
+							var parsedValue = Number(child.value);
+							newNode.valor = isNaN(parsedValue) ? child.value : parsedValue;
+						}
+					} else {
+						newNode.valor = null;
+					}
+
+					// optional: allow marking nodes as pruned with "quebra": true
+					newNode.quebra = (child.quebra === true);
+
+					// recursive build
+					buildFromJsonNode(child, newNode.pk);
+				}
+			}
+
+			function validateTreeJson(node) {
+				// Basic validation: root must be an object, and every leaf (node without children)
+				// must have a numeric `value` (strings that parse to numbers are accepted).
+				if (!node || typeof node !== 'object') {
+					return 'Root must be a JSON object';
+				}
+				var errors = [];
+				function visit(n, path) {
+					if (n && n.children && Array.isArray(n.children) && n.children.length > 0) {
+						for (var i = 0; i < n.children.length; i++) {
+							visit(n.children[i], path + '[' + i + ']');
+						}
+					} else {
+						// It's a leaf. It must have a numeric value.
+						if (typeof n.value === 'undefined' || n.value === null || isNaN(Number(n.value))) {
+							errors.push('Leaf ' + path + ' must have numeric "value"');
+						}
+					}
+				}
+				visit(node, 'root');
+				return errors.length ? errors.join('; ') : null;
+			}
+
+			window.importTreeFromJson = function(obj) {
+				var node = obj && obj.tree ? obj.tree : obj;
+				if (!node || typeof node !== 'object') {
+					alert('Invalid JSON tree format. Expected an object with optional "value" and "children".');
+					return;
+				}
+
+				// reset canvas/tree
+				excluirTudo();
+
+				// set root value if provided
+				if (typeof node.value !== 'undefined') {
+					if (node.value === null) {
+						raiz.valor = null;
+					} else {
+						var v = Number(node.value);
+						raiz.valor = isNaN(v) ? node.value : v;
+					}
+				} else {
+					raiz.valor = null;
+				}
+
+				// build the rest of the tree from children recursively
+				buildFromJsonNode(node, raiz.pk);
+
+				// redraw
+				tela.draw();
+			};
+
+			// wire up dialog buttons
+			$("#btnImportJson").click(function() {
+				var btn = $(this);
+				btn.prop('disabled', true);
+				var raw = $("#treeJsonInput").val();
+				if (!raw || raw.trim() === "") {
+					alert("Please paste a JSON representation of the tree.");
+					btn.prop('disabled', false);
+					return;
+				}
+				var parsed;
+				try {
+					parsed = JSON.parse(raw);
+				} catch (e) {
+					alert("Invalid JSON: " + e.message);
+					btn.prop('disabled', false);
+					return;
+				}
+				// Validate the JSON tree first
+				var validationError = validateTreeJson(parsed);
+				if (validationError) {
+					alert('Invalid tree: ' + validationError);
+					btn.prop('disabled', false);
+					return;
+				}
+				// Try to import the tree
+				importTreeFromJson(parsed);
+				$("#dialog-import").dialog('close');
+				btn.prop('disabled', false);
+			});
+
+			$("#btnCancelImport").click(function() {
+				$("#dialog-import").dialog('close');
+			});
+		});
+	</script>
+
+</body>
 </html>
